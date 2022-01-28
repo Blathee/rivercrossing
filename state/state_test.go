@@ -3,7 +3,7 @@ package state
 import "testing"
 
 func TestViewState(t *testing.T) {
-	wanted := state
+	wanted := "[kylling rev korn hs VEST---\\_____/______________/---ØST]"
 	state := ViewState()
 	if state != wanted {
 		t.Errorf("Feil, fikk %q, ønsket %q.", state, wanted)
