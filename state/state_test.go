@@ -11,16 +11,16 @@ func TestViewState(t *testing.T) {
 }
 
 func TestPutInBoat(t *testing.T) {
-	wanted := state
-	state := ViewState()
+	wanted := "[kylling rev korn VEST---\\_kylling_hs_/______________/---ØST]"
+	state := PutInBoat()
 	if state != wanted {
 		t.Errorf("Feil, fikk %q, ønsket %q.", state, wanted)
 	}
 }
 
 func TestCrossRiver(t *testing.T) {
-	wanted := state
-	state := ViewState()
+	wanted := "[kylling rev korn VEST---\\______________\\_kylling_hs_//---ØST]"
+	state := CrossRiver()
 	if state != wanted {
 		t.Errorf("Feil, fikk %q, ønsket %q.", state, wanted)
 	}
